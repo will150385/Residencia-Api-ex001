@@ -6,4 +6,4 @@ import br.com.residencia.biblioteca.entity.Livros;
 
 public interface LivrosRepository extends JpaRepository<Livros,Integer> {
 
-}
+} 
