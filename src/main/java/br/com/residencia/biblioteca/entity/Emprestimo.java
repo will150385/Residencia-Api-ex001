@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -30,7 +29,7 @@ public class Emprestimo {
 	
 	
 	//private Integer codigoLivro;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name= "codigolivro",referencedColumnName="codigolivro")
 	private Livros livros;
 	
@@ -59,6 +58,8 @@ public class Emprestimo {
 	public void setAluno(Alunos aluno) {
 		this.aluno = aluno;
 	}
+
+	
 
 	public Livros getLivros() {
 		return livros;
