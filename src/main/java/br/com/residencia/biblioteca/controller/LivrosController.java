@@ -56,6 +56,14 @@ public class LivrosController {
 			return new ResponseEntity<>(livrosService.deleteLivros(id),HttpStatus.OK);
 		
 	}
+
+	public LivrosService getLivrosService() {
+		return livrosService;
+	}
+
+	public void setLivrosService(LivrosService livrosService) {
+		this.livrosService = livrosService;
+	}
 	
 	
 

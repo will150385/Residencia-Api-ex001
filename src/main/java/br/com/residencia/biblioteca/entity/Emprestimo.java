@@ -12,6 +12,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+@JsonIdentityInfo(
+		generator = ObjectIdGenerators.PropertyGenerator.class,
+		property = "codigoEmprestimo")
+
 @Entity
 @Table(name="emprestimo")
 public class Emprestimo {
@@ -23,12 +30,14 @@ public class Emprestimo {
 	
 	
 	//private Integer numeroMatriculaAluno;
+	
 	@ManyToOne
 	@JoinColumn(name= "numeromatriculaaluno",referencedColumnName="numeromatriculaaluno")
 	private Alunos aluno;
 	
 	
 	//private Integer codigoLivro;
+	
 	@ManyToOne
 	@JoinColumn(name= "codigolivro",referencedColumnName="codigolivro")
 	private Livros livros;

@@ -53,6 +53,12 @@ public class AlunoController {
 	public ResponseEntity<Alunos>deleteAlunos(@PathVariable Integer id){
 		return new ResponseEntity<>(alunoServico.deleteAlunos(id),HttpStatus.OK);
 	}
+	public AlunoServico getAlunoServico() {
+		return alunoServico;
+	}
+	public void setAlunoServico(AlunoServico alunoServico) {
+		this.alunoServico = alunoServico;
+	}
 	
 	
 	
